@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Majs Airlines</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/js/bootstrap-datetimepicker.min.js"></script>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/css/bootstrap-datetimepicker.min.css">
+      
+  
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   
+    <script src="js/moment.js"></script>
+	<script src="js/Izvestaji.js"></script>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">    
+    
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+</head>
+<body>
+<header class="container-fluid">
+        <nav class="navbar navbar-inverse">
+                <div class="navbar-fixed-top container-fluid boja">
+                  <div class="navbar-header boja">
+                    <a class="navbar-brand" href="#"><img class="slika" src="slike/logo1.png"  style="width:50%"></a>
+                  </div>
+                  
+                  <ul class="nav navbar-nav navbar-right">
+                    <li><button class="btn btn-lg pull-center boja" id="povratak"> Povratak</button></li>
+                    <li><a href="#modalLogout" id="logoutLink"><span class="glyphicon glyphicon-log-out"></span> Odjava</a></li>
+                  </ul>
+                </div>
+        </nav>
+</header>
+
+    <div id="content">
+        <div id="welcomeDiv">
+                <h2> Dobrodosli, <span id="userSpan"></span></h2>   
+        </div>
+    </div>
+    <div>
+    
+           							 <div class='input-group date' id='datetimepicker6'>
+                                        <input type='text' id="dtp6" placeholder="Datum(Vreme) Polaska" class="form-control" />
+                                        <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                        </span>
+                                    </div>
+          
+            						<div class='input-group date' id='datetimepicker7'>
+                                        <input type='text' id="dtp7" placeholder="Datum(Vreme) Dolaska" class="form-control" />
+                                        <span class="input-group-addon">
+                                            <span class="glyphicon glyphicon-calendar"></span>
+                                        </span>
+                                    </div> 
+                                    <button class="btn btn-lg pull-center boja" id="prikaziIzvestaj"> Prikazi izvestaje</button>
+    </div>
+    <div class="container-fluid tabela">           
+    <table id="izvestajiAdmin" class="table table-hover boja">
+      <thead>
+        <tr>
+            <th onclick="sortTable(0)"> Naziv aerodroma </th>
+           
+            <th onclick="sortTable(1)"> Broj letova </th>
+            <th onclick="sortTable(2)"> Broj prodatih karti</th>
+            <th onclick="sortTable(3)"> Ukupna cena karti</th>
+			
+        </tr>
+      
+      </thead>
+     
+    </table>
+    
+  </div>
+            
+ <div id="modalLogout" class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">MAJS AIRLINES</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Zelite da se izlogujete?Dodjite nam ponovo</p>
+      </div>
+      <div class="modal-footer">
+        <button id="btnOK" type="button" class="btn btn-primary">OK</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<script>
+$(function() {
+	  $('#datetimepicker6').datetimepicker({format: "YYYY-MM-DD hh:mm:ss", locale: moment.locale('fr')});
+	  $('#datetimepicker7').datetimepicker({format: "YYYY-MM-DD hh:mm:ss", locale: moment.locale('fr')});
+	});
+function sortTable(n) {
+	  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+	  table = document.getElementById("izvestajiAdmin");
+	  switching = true;
+	  // Set the sorting direction to ascending:
+	  dir = "asc"; 
+	  /* Make a loop that will continue until
+	  no switching has been done: */
+	  while (switching) {
+	    // Start by saying: no switching is done:
+	    switching = false;
+	    rows = table.rows;
+	    /* Loop through all table rows (except the
+	    first, which contains table headers): */
+	    for (i = 1; i < (rows.length - 1); i++) {
+	      // Start by saying there should be no switching:
+	      shouldSwitch = false;
+	      /* Get the two elements you want to compare,
+	      one from current row and one from the next: */
+	      x = rows[i].getElementsByTagName("TD")[n];
+	      y = rows[i + 1].getElementsByTagName("TD")[n];
+	      /* Check if the two rows should switch place,
+	      based on the direction, asc or desc: */
+	      if (dir == "asc") {
+	        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+	          // If so, mark as a switch and break the loop:
+	          shouldSwitch = true;
+	          break;
+	        }
+	      } else if (dir == "desc") {
+	        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+	          // If so, mark as a switch and break the loop:
+	          shouldSwitch = true;
+	          break;
+	        }
+	      }
+	    }
+	    if (shouldSwitch) {
+	      /* If a switch has been marked, make the switch
+	      and mark that a switch has been done: */
+	      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+	      switching = true;
+	      // Each time a switch is done, increase this count by 1:
+	      switchcount ++; 
+	    } else {
+	      /* If no switching has been done AND the direction is "asc",
+	      set the direction to "desc" and run the while loop again. */
+	      if (switchcount == 0 && dir == "asc") {
+	        dir = "desc";
+	        switching = true;
+	      }
+	    }
+	  }
+	}
+</script>   
+    
+</body>
+</html>

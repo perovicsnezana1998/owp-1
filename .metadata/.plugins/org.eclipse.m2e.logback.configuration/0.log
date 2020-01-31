@@ -1,0 +1,8 @@
+2019-12-25 15:47:01,673 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2020-01-24 14:52:11,633 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2020-01-24 14:52:23,323 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Updating Gradle version information cache failed. Using outdated cache.
+2020-01-24 15:05:36,582 [Worker-6: Check Injection] INFO  j.exodus.env.EnvironmentImpl - Exodus environment created: C:\Users\Borko\Desktop\WebProjekat\.metadata\com.genuitec.eclipse.webclipse.livepreview\0\store
+2020-01-24 15:05:36,776 [Worker-6: Check Injection] INFO  j.exodus.env.EnvironmentImpl - Exodus environment created: C:\Users\Borko\Desktop\WebProjekat\.metadata\com.genuitec.eclipse.webclipse.livepreview\1\store
+2020-01-24 15:07:42,090 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2020-01-26 14:50:19,850 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2020-01-29 03:41:00,789 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.

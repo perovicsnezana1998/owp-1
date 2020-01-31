@@ -1,0 +1,21 @@
+package cinema.DAO;
+
+import java.sql.Connection;
+import java.util.Properties;
+
+import javax.sql.DataSource;
+
+import org.apache.commons.dbcp2.BasicDataSourceFactory;
+
+
+
+public class ConnectionManager {
+	private static final String DATABASE_NAME = "cinema.db";
+	private static final String FILE_SEPERATOR = System.getProperty("file.seperator");
+
+	private static final String WINDOWS_PATH = "C:" + FILE_SEPERATOR + "Baza" + FILE_SEPERATOR + DATABASE_NAME;
+	
+	
+
+}
+

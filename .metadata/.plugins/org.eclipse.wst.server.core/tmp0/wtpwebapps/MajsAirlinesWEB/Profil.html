@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Majs Airlines</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/Profil.js"></script>
+    <script src="js/Korisnik.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <script src="js/moment.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+</head>
+<body>
+<header class="container-fluid">
+        <nav class="navbar navbar-inverse">
+                <div class="navbar-fixed-top container-fluid boja">
+                  <div class="navbar-header boja">
+                    <a class="navbar-brand" href="#"><img class="slika" src="slike/logo1.png"  style="width:50%"></a>
+                  </div>
+                  
+                  <ul class="nav navbar-nav navbar-right">
+                    <li><button class="btn btn-lg pull-center boja" id="povratak"> Povratak</button></li>
+                    <li><a href="#modalLogout" id="logoutLink"><span class="glyphicon glyphicon-log-out"></span> Odjava</a></li>
+                  </ul>
+                </div>
+        </nav>
+</header>
+
+    <div id="content">
+        <div id="welcomeDiv">
+                <h2> Dobrodosli, <span id="userSpan"></span></h2>   
+        </div>
+    </div>
+    <div class="container welcome">
+            <div class="card" style="width:500px">
+                    <img class="card-img-top" src="slike/profil.png" alt="Card image">
+                    <div class="card-body">
+                      <h4 class="card-title">Profil</h4>
+                      <form class="form" >
+                            <div class="form-group">
+                                <label for="korisnickoIme" class="text-white">Korisnicko ime:</label><br>
+                                <input type="text" name="korisnickoIme" id="korisnickoImeUnos" class="form-control"><br>
+                                <label id="korisnikKorImePoruka" class="text-white"></label>
+                            </div>
+                            <div class="form-group">
+                                <label for="lozinka" class="text-white">Lozinka:</label><br></br>
+                                <input type="password" name="lozinka" id="lozinkaUnos" class="form-control"></div></form><br></br>
+                                <label id="korisnikPasswordPoruka" class="text-white"></label>
+                            </div>
+                            
+                            <div class="form-group">
+                                
+                                <input type="submit" name="submit" class="btn boja btn-md" value="Izmeni" id="updateSubmitProfil"><br></br>
+                                <label id="blokiranPoruka" class="text-white"></label>
+                            </div>
+                        
+                      
+                    </div>
+            </div>
+            
+ <div id="modalLogout" class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">MAJS AIRLINES</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Zelite da se izlogujete?Dodjite nam ponovo</p>
+      </div>
+      <div class="modal-footer">
+        <button id="btnOK" type="button" class="btn btn-primary">OK</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    
+</body>
+</html>

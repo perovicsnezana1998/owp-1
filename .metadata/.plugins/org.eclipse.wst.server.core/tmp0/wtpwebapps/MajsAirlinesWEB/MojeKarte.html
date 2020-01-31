@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Majs Airlines</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/js/bootstrap-datetimepicker.min.js"></script>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/css/bootstrap-datetimepicker.min.css">
+      
+    
+    <script src="js/MojeKarte.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <script src="js/moment.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+</head>
+<body>
+<header class="container-fluid">
+        <nav class="navbar navbar-inverse">
+                <div class="navbar-fixed-top container-fluid boja">
+                  <div class="navbar-header boja">
+                    <a class="navbar-brand" href="#"><img class="slika" src="slike/logo1.png"  style="width:50%"></a>
+                  </div>
+                  
+                  <ul class="nav navbar-nav navbar-right">
+                    <li><button class="btn btn-lg pull-center boja" id="povratak"> Povratak</button></li>
+                    <li><a href="#modalLogout" id="logoutLink"><span class="glyphicon glyphicon-log-out"></span> Odjava</a></li>
+                  </ul>
+                </div>
+        </nav>
+</header>
+
+    <div id="content">
+        <div id="welcomeDiv">
+                <h2> Dobrodosli, <span id="userSpan"></span></h2>   
+        </div>
+    </div>
+    
+   <div class="container-fluid tabela">  
+           
+    <table id="rezervisaneKarte" class="table table-hover boja">
+      <thead>
+      <h1>REZERVISANE KARTE</h1>
+        <tr>
+            
+            <th onclick="sortTable(0)"> Datum (vreme) rezervacije<br> 
+           							 </th>
+           
+        
+      </tr>
+      </thead>
+    
+     
+    </table>
+    <table id="kupljeneKarte" class="table table-hover boja">
+      <thead>
+      <h1>KUPLJENE KARTE</h1>
+        <tr>
+           
+            <th onclick="sortTable(0)"> Datum (vreme) kupovine<br> 
+           							</th>
+           
+        
+      </tr>
+      </thead>
+     
+    </table>
+    </div>
+ <div id="modalLogout" class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">MAJS AIRLINES</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Zelite da se izlogujete?Dodjite nam ponovo</p>
+      </div>
+      <div class="modal-footer">
+        <button id="btnOK" type="button" class="btn btn-primary">OK</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<script >
+$(function() {
+	  $('#datetimepicker6').datetimepicker({format: "YYYY-MM-DD hh:mm:ss", locale: moment.locale('fr')});
+	  $('#datetimepicker7').datetimepicker({format: "YYYY-MM-DD hh:mm:ss", locale: moment.locale('fr')});
+	});
+</script>
+
+    
+</body>
+</html>

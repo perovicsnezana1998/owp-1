@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Majs Airlines</title>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/js/bootstrap-datetimepicker.min.js"></script>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/css/bootstrap-datetimepicker.min.css">
+      
+  
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   
+    <script src="js/moment.js"></script>
+	<script src="js/Administrator.js"></script>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">    
+    
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+</head>
+<body>
+<header class="container-fluid">
+        <nav class="navbar navbar-inverse">
+                <div class="navbar-fixed-top container-fluid boja">
+                  <div class="navbar-header boja">
+                    <a class="navbar-brand" href="#"><img class="slika" src="slike/logo1.png"  style="width:50%"></a>
+                  </div>
+                  <ul class="nav navbar-nav boja tekst">
+                    <li class="boja"><button type="button" class="btn btn-lg pull-center boja" id="kupiRezervisiKartuBezLeta">Uzmi kartu</button></li>
+                    <li><button type="button" class="btn btn-lg pull-center boja" id="prikazKarataAdmin">Moje karta</button></li>
+                    <li><button type="button" class="btn btn-lg pull-center boja" id="karteAdmin">Karte</button></li>
+                    <li><button type="button" class="btn btn-lg pull-center boja" id="korisniciAdmin">Korisnici</button></li>
+                    <li><button type="button" class="btn btn-lg pull-center boja" id="izvestaji">Izvestaji</button></li>
+                  </ul>
+                  <ul class="nav navbar-nav navbar-right">
+                    <li><a href="Profil.html"><span><i class="fas fa-user-circle"></i></span> Profil</a></li>
+                    <li><a href="#modalLogout" id="logoutLink"><span class="glyphicon glyphicon-log-out"></span> Odjava</a></li>
+                  </ul>
+                </div>
+        </nav>
+</header>
+
+    <div id="content">
+        <div id="welcomeDiv">
+                <h2> Dobrodosli, <span id="userSpan"></span></h2>   
+        </div>
+    </div>
+<div class="container-fluid">
+  
+    <div class="card text-white">
+        <div class="card-header text-center boja"><h2>Pronadji najpovoljniji let</h2></div>
+        <button id="nadjiLet" class="btn btn-lg pull-center boja slika">Nadji let</button>
+        <button id="osvezi" class="btn btn-lg pull-center boja slika">Osvezi</button>
+        <button id="dodajLet" class="btn btn-lg pull-center boja slika">Dodaj let</button>
+        </div>
+     </div>
+
+ 
+ <div class="container-fluid tabela">           
+    <table id="letoviTabelaAdmin" class="table table-hover boja">
+      <thead>
+        <tr>
+            <th onclick="sortTable(0)"> Broj leta <br><input type="text" id="brojLetaFilterInput"></th>
+            <th onclick="sortTable(1)"> Datum (vreme) polaska<br> 
+           							 <div class='input-group date' id='datetimepicker6'>
+                                        <input type='text' id="dtp6" placeholder="Datum(Vreme) Polaska" class="form-control" />
+                                        <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                        </span>
+                                    </div></th>
+            <th onclick="sortTable(2)"> Datum (vreme) dolaska<br></br> 
+            						<div class='input-group date' id='datetimepicker7'>
+                                        <input type='text' id="dtp7" placeholder="Datum(Vreme) Dolaska" class="form-control" />
+                                        <span class="input-group-addon">
+                                            <span class="glyphicon glyphicon-calendar"></span>
+                                        </span>
+                                    </div> </th>
+            <th onclick="sortTable(3)"><span><i class="fas fa-plane-departure"></i></span> Polazni aerodrom<br></br> 
+            							<select id="polazniAerodromPonudjene">
+					  						<option value="TIV" selected>Tivat</option>
+					  						<option value="AMS" selected>Amsterdam</option>
+					  						<option value="IST" selected>Istanbul</option>
+					  						<option value="LON" selected>London</option>
+					  						<option value="BEG" selected>Beograd</option>
+					  						<option value="PG" selected>Podgorica</option>
+										</select>  </th>
+            <th onclick="sortTable(4)"><span><i class="fas fa-plane-arrival"></i></span> Dolazni aerodrom <br></br> 
+            							<select id="dolazniAerodromPonudjene">
+					  						<option value="TIV" selected>Tivat</option>
+					  						<option value="AMS" selected>Amsterdam</option>
+					  						<option value="IST" selected>Istanbul</option>
+					  						<option value="LON" selected>London</option>
+					  						<option value="BEG" selected>Beograd</option>
+					  						<option value="PG" selected>Podgorica</option>
+										</select>  </th>
+            <th onclick="sortTable(5)"> Broj sedišta</th>
+            <th onclick="sortTable(6)"> Broj slobodnih sedišta</th>
+            <th onclick="sortTable(7)"> Cena karte &nbsp;<input type="text" id="lowPriceFilterInput" placeholder="Cena od"><br/>
+				<input type="text" id="highPriceFilterInput" placeholder="Cena do"></th>
+        </tr>
+      
+      </thead>
+     
+    </table>
+  </div>
+          <div class="container-fluid">
+                <h2 class="text-center">KONTAKT</h2>
+                    <div class="row">
+                          <div class="col-sm-5">
+                            <p>Kontaktirajte nas,na usluzi smo Vam 24h</p>
+                            <p><span class="fas fa-mobile-alt"></span> +381216399299</p>
+                            <p><span class="fas fa-envelope"></span> milicaslankamenac91@yahoo.com</p>
+                            <img class="slika" src="slike/mapa.jpg"  style="width:30%">
+                          </div>
+                          <div class="col-sm-7">
+                            <div class="row">
+                              <div class="col-sm-6 form-group">
+                                <input class="form-control" id="ime" name="ime" placeholder="Ime" type="text" required>
+                              </div>
+                              <div class="col-sm-6 form-group">
+                                <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+                              </div>
+                            </div>
+                            <textarea class="form-control" id="komentar" name="komentar" placeholder="Komentar" rows="5"></textarea><br>
+                            <div class="row">
+                              <div class="col-sm-12 form-group">
+                                <button class="btn btn-lg pull-right boja slika" type="submit">Posalji</button>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+        </div>
+        
+ <div id="modalLogout" class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">MAJS AIRLINES</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Zelite da se izlogujete?Dodjite nam ponovo</p>
+      </div>
+      <div class="modal-footer">
+        <button id="btnOK" type="button" class="btn btn-primary">OK</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<footer class="container-fluid text-center">
+        <p>©Copyright Copy MajsAirlines2019</p>
+</footer>
+<script>
+$(function() {
+	  $('#datetimepicker6').datetimepicker({format: "YYYY-MM-DD hh:mm:ss", locale: moment.locale('fr')});
+	  $('#datetimepicker7').datetimepicker({format: "YYYY-MM-DD hh:mm:ss", locale: moment.locale('fr')});
+	});
+function sortTable(n) {
+	  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+	  table = document.getElementById("letoviTabelaAdmin");
+	  switching = true;
+	  // Set the sorting direction to ascending:
+	  dir = "asc"; 
+	  /* Make a loop that will continue until
+	  no switching has been done: */
+	  while (switching) {
+	    // Start by saying: no switching is done:
+	    switching = false;
+	    rows = table.rows;
+	    /* Loop through all table rows (except the
+	    first, which contains table headers): */
+	    for (i = 1; i < (rows.length - 1); i++) {
+	      // Start by saying there should be no switching:
+	      shouldSwitch = false;
+	      /* Get the two elements you want to compare,
+	      one from current row and one from the next: */
+	      x = rows[i].getElementsByTagName("TD")[n];
+	      y = rows[i + 1].getElementsByTagName("TD")[n];
+	      /* Check if the two rows should switch place,
+	      based on the direction, asc or desc: */
+	      if (dir == "asc") {
+	        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+	          // If so, mark as a switch and break the loop:
+	          shouldSwitch = true;
+	          break;
+	        }
+	      } else if (dir == "desc") {
+	        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+	          // If so, mark as a switch and break the loop:
+	          shouldSwitch = true;
+	          break;
+	        }
+	      }
+	    }
+	    if (shouldSwitch) {
+	      /* If a switch has been marked, make the switch
+	      and mark that a switch has been done: */
+	      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+	      switching = true;
+	      // Each time a switch is done, increase this count by 1:
+	      switchcount ++; 
+	    } else {
+	      /* If no switching has been done AND the direction is "asc",
+	      set the direction to "desc" and run the while loop again. */
+	      if (switchcount == 0 && dir == "asc") {
+	        dir = "desc";
+	        switching = true;
+	      }
+	    }
+	  }
+	}
+</script>   
+</body>
+</html>

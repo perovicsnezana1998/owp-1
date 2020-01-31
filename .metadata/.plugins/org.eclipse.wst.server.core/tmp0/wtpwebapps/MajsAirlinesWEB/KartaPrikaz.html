@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Majs Airlines</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/js/bootstrap-datetimepicker.min.js"></script>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/css/bootstrap-datetimepicker.min.css">
+      
+  
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   
+    <script src="js/moment.js"></script>
+	<script src="js/KartaPrikaz.js"></script>
+	
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">    
+    
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+</head>
+<body>
+<header class="container-fluid">
+        <nav class="navbar navbar-inverse">
+                <div class="navbar-fixed-top container-fluid boja">
+                  <div class="navbar-header boja">
+                    <a class="navbar-brand" href="#"><img class="slika" src="slike/logo1.png"  style="width:50%"></a>
+                  </div>
+                  
+                  <ul class="nav navbar-nav navbar-right">
+                    <li><button class="btn btn-lg pull-center boja" id="povratak"> Povratak</button></li>
+                    <li><a href="#modalLogout" id="logoutLink"><span class="glyphicon glyphicon-log-out"></span> Odjava</a></li>
+                  </ul>
+                </div>
+        </nav>
+</header>
+
+    <div id="content">
+        <div id="welcomeDiv">
+                <h2> Dobrodosli, <span id="userSpan"></span></h2>   
+        </div>
+        
+    </div>
+    <div class="container welcome">
+            <div class="card" style="width:500px">
+                    
+            <div class="card-body">
+            <h1 class="card-title">Detalji o karti</h1>
+            
+            <form role="form">
+            <div class="form-group">
+              <label for="usrname"> Broj leta polaznog </label>
+             <a href="#goLet"><label class="form-control" id="brojLetaL"></label></a>
+             </div>
+            <div class="form-group">
+              <label for="usrname"> Broj leta povratnog </label>
+             <a href="#goLET"> <label class="form-control" id="brojLetaP"></label></a>
+            </div>
+            <div class="form-group">
+              <label for="usrname"> Korisnicko ime </label>
+              <a href="#goKorisnik"><label class="form-control" id="korIme"></label></a>
+            </div>
+             <div class="form-group">
+              <label for="psw">Sediste polazni</label>
+              <label class="form-control" id="sedistePol"></label>
+            </div>
+            <div class="form-group">
+              <label for="psw">Sediste povratni let</label>
+              <label class="form-control" id="sedistePov"></label>
+            </div>
+            <div class="form-group">
+              <label for="psw">Cena</label>
+              <label class="form-control" id="cenaL"></label>
+            </div>
+            </form>
+        <button id="izmeniKartu" class="btn btn-lg pull-center boja slika">Izmeni</button>   
+        <button id="obrisiKartu" class="btn btn-lg pull-center boja slika">Obrisi</button>  
+       </div>
+       </div>
+ </div>
+
+    
+
+
+<div id="modalLogout" class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">MAJS AIRLINES</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Zelite da se izlogujete?Dodjite nam ponovo</p>
+      </div>
+      <div class="modal-footer">
+        <button id="btnOK" type="button" class="btn btn-primary">OK</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="modalObrisi" class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">MAJS AIRLINES</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Da li ste sigurni da zelite da obrisete kartu?</p>
+      </div>
+      <div class="modal-footer">
+        <button id="btnOKI" type="button" class="btn btn-primary">OK</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="modalIzmeni" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">MAJS AIRLINES</h4>
+      </div>
+      <div class="modal-body">
+        <p>Karta ne moze da se izmeni i obrise</p>
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+
+<footer class="container-fluid text-center">
+        <p>©Copyright MajsAirlines2019</p>
+</footer>
+<script>
+$(function() {
+	  $('#datetimepicker6').datetimepicker({format: "YYYY-MM-DD hh:mm:ss", locale: moment.locale('fr')});
+	  $('#datetimepicker7').datetimepicker({format: "YYYY-MM-DD hh:mm:ss", locale: moment.locale('fr')});
+	});
+
+</script>   
+</body>
+</html>

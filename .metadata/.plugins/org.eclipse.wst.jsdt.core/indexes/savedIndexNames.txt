@@ -1,0 +1,12 @@
+INDEX VERSION 1.4+C:\Users\Borko\Desktop\WebProjekat\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+3215133055.index
+3625802755.index
+3464429587.index
+3523189012.index
+556334069.index
+703930757.index
+3631750672.index
+1393969359.index
+1070451531.index
+2888246720.index
+3733538949.index

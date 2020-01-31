@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;ConnectionManager.java&apos; to &apos;jevTEATRO/src/cinema.Model&apos;&#x0D;&#x0A;- Original project: &apos;MajsAirlinesWEB&apos;&#x0D;&#x0A;- Destination element: &apos;jevTEATRO/src/cinema.Model&apos;&#x0D;&#x0A;- Original element: &apos;airlines.DAO.ConnectionManager.java&apos;" description="Copy compilation unit" destination="=jevTEATRO/src&lt;cinema.Model" element1="/src&lt;airlines.DAO{ConnectionManager.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1580142062983" units="1" version="1.0"/>
+</session>

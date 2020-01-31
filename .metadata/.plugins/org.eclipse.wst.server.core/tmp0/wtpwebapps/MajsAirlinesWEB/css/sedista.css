@@ -1,0 +1,10 @@
+#sedistaPolazni{
+	display: grid;
+	grid-template-columns:50px 50px 50px 50px 50px 50px;
+	
+}
+#sedistaPovratni{
+	display: grid;
+	grid-template-columns:50px 50px 50px 50px 50px 50px;
+	
+}

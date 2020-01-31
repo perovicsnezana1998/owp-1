@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Majs Airlines</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/js/bootstrap-datetimepicker.min.js"></script>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/css/bootstrap-datetimepicker.min.css">
+      
+  
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   
+    <script src="js/moment.js"></script>
+	<script src="js/Karta1.js"></script>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">    
+    
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+</head>
+<body>
+<header class="container-fluid">
+        <nav class="navbar navbar-inverse">
+                <div class="navbar-fixed-top container-fluid boja">
+                  <div class="navbar-header boja">
+                    <a class="navbar-brand" href="#"><img class="slika" src="slike/logo1.png"  style="width:50%"></a>
+                  </div>
+                  
+                  <ul class="nav navbar-nav navbar-right">
+                    
+                    <li><a href="#modalLogout" id="logoutLink"><span class="glyphicon glyphicon-log-out"></span> Odjava</a></li>
+                  </ul>
+                </div>
+        </nav>
+</header>
+
+    <div id="content">
+        <div id="welcomeDiv">
+                <h2> Dobrodosli, <span id="userSpan"></span></h2>   
+        </div>
+    </div>
+<div class="card text-center">
+ <div class="card-header">
+    <h1></h1>
+  </div>
+  <div class="card-body">
+    
+    <div id="home" class="container">
+      <h3>FAZA1-Polazni let</h3>
+      
+      <table id="letoviTabela" class="table table-hover boja">
+      <thead>
+        <tr>
+            <th onclick="sortTable(0)"> Broj leta </th>
+            <th onclick="sortTable(1)"> Datum (vreme) polaska </th>
+            <th onclick="sortTable(2)"> Datum (vreme) dolaska  </th>
+            <th onclick="sortTable(3)"><span><i class="fas fa-plane-departure"></i></span> Polazni aerodrom </th>
+            <th onclick="sortTable(4)"><span><i class="fas fa-plane-arrival"></i></span> Dolazni aerodrom </th>
+            <th onclick="sortTable(5)"> Broj sedišta </th>
+            <th onclick="sortTable(6)"> Cena karte </th>
+        </tr>
+      </thead>
+     
+    </table>
+    <form role="form">
+            <div class="form-group">
+              <label for="usrname"> Broj Leta</label>
+              <label class="form-control" id="brojLetaK"></label>
+            </div>
+            <div class="form-group">
+              <label for="psw">Datum polaska</label>
+              <label class="form-control" id="datumPolaskaK"></label>
+            </div>
+            <div class="form-group">
+              <label for="psw">Polazni aerodrom</label>
+              <label class="form-control" id="polazniK"></label>
+            </div>
+            
+    
+      </form>
+      <div class="form-group">
+         <input type="submit" name="submit" class="btn btn-md pull-center boja slika" value="Povratni let" id="povratniDugme">
+         <input type="submit" name="submit" class="btn btn-md pull-center boja slika" value="U jednom pravcu" id="uJednomDugme">
+         <input type="submit" name="submit" class="btn btn-md pull-center boja slika" value="Odustani" id="odustaniKarta">
+         <label id="ispravnoPrva"></label>
+     </div>
+ 
+  
+</div>
+</div>
+</div>
+<div id="modalLogout" class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">MAJS AIRLINES</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Zelite da se izlogujete?Dodjite nam ponovo</p>
+      </div>
+      <div class="modal-footer">
+        <button id="btnOK" type="button" class="btn btn-primary">OK</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+</html>

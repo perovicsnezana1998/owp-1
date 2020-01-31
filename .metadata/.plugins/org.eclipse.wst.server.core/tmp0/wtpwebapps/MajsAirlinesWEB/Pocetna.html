@@ -1,0 +1,356 @@
+<!-- MilicaSlankamenac SF22017 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Majs Airlines</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/js/bootstrap-datetimepicker.min.js"></script>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/css/bootstrap-datetimepicker.min.css">
+      
+  
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   
+    <script src="js/moment.js"></script>
+	<script src="js/Pocetna.js"></script>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">    
+    
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+</head>
+<body>
+    <header class="container-fluid">
+        <nav class="navbar navbar-inverse">
+                <div class="navbar-fixed-top container-fluid boja">
+                  <div class="navbar-header boja">
+                    <a class="navbar-brand" href="#"><img class="slika" src="slike/slike/logo1.png"  style="width:50%"></a>
+                  </div>
+                  <ul class="nav navbar-nav boja" id="navTekst">
+                    <li class="boja"><a href="Pocetna.html" id="navHome">Pocetna</a></li>
+                    <li><a id="navONama" href="ONama.html">O nama</a></li>
+                   
+                  </ul>
+                  <ul class="nav navbar-nav navbar-right">
+                    <li><button type="button" class="btn btn-lg pull-center boja" id="myBtnRegistracija"><span class="glyphicon glyphicon-user"></span> Registracija</button></li>
+                    <li><button type="button" class="btn btn-lg pull-center boja" id="myBtn">Prijava<span class="glyphicon glyphicon-log-in"></span></button></li>
+                  </ul>
+                </div>
+        </nav>
+    </header>
+
+
+
+<div class="container-fluid">
+  
+    <div class="card text-white">
+        <div class="card-header text-center boja"><h2>Pronadji najpovoljniji let</h2></div>
+        <button id="nadjiLet" class="btn btn-lg pull-center boja slika">Nadji let</button>
+        <button id="osvezi" class="btn btn-lg pull-center boja slika">Osvezi</button>
+        </div>
+     </div>
+
+<div class="container-fluid tabela">           
+    <table id="letoviTabela" class="table table-hover boja">
+      <thead>
+        <tr>
+            <th onclick="sortTable(0)"> Broj leta <br></br><input type="text" id="brojLetaFilterInput"></th>
+            <th onclick="sortTable(1)"> Datum (vreme) polaska<br></br> 
+           							 <div class='input-group date' id='datetimepicker6'>
+                                        <input type='text' id="dtp6" placeholder="Datum(Vreme) Polaska" class="form-control" />
+                                        <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                        </span>
+                                    </div></th>
+            <th onclick="sortTable(2)"> Datum (vreme) dolaska<br></br> 
+            						<div class='input-group date' id='datetimepicker7'>
+                                        <input type='text' id="dtp7" placeholder="Datum(Vreme) Dolaska" class="form-control" />
+                                        <span class="input-group-addon">
+                                            <span class="glyphicon glyphicon-calendar"></span>
+                                        </span>
+                                    </div> </th>
+            <th onclick="sortTable(3)"><span><i class="fas fa-plane-departure"></i></span> Polazni aerodrom<br></br>
+            							<select id="polazniAerodromPonudjene">
+					  						<option value="TIV" selected>Tivat</option>
+					  						<option value="AMS" selected>Amsterdam</option>
+					  						<option value="IST" selected>Istanbul</option>
+					  						<option value="LON" selected>London</option>
+					  						<option value="BEG" selected>Beograd</option>
+					  						<option value="PG" selected>Podgorica</option>
+										</select>  </th>
+            <th onclick="sortTable(4)"><span><i class="fas fa-plane-arrival"></i></span> Dolazni aerodrom<br></br>
+            							<select id="dolazniAerodromPonudjene">
+					  						<option value="TIV" selected>Tivat</option>
+					  						<option value="AMS" selected>Amsterdam</option>
+					  						<option value="IST" selected>Istanbul</option>
+					  						<option value="LON" selected>London</option>
+					  						<option value="BEG" selected>Beograd</option>
+					  						<option value="PG" selected>Podgorica</option>
+										</select>  </th>
+            <th onclick="sortTable(5)"> Broj sedišta<br></br> </th>
+            <th onclick="sortTable(6)"> Broj slobodnih sedišta<br></br></th>
+            <th onclick="sortTable(7)"> Cena karte &nbsp;<input type="text" id="lowPriceFilterInput" placeholder="Cena od"><br/>
+				<input type="text" id="highPriceFilterInput" placeholder="Cena do"></th>
+        </tr>
+      
+      </thead>
+     
+    </table>
+  </div>
+<div class="container-fluid">
+        <h2 class="text-center">KONTAKT</h2>
+            <div class="row">
+                  <div class="col-sm-5">
+                    <p>Kontaktirajte nas,na usluzi smo Vam 24h</p>
+                    <p><span class="fas fa-mobile-alt"></span> +381216399299</p>
+                    <p><span class="fas fa-envelope"></span> milicaslankamenac91@yahoo.com</p>
+                    <img class="slika" src="slike/mapa.jpg"  style="width:30%">
+                  </div>
+                  <div class="col-sm-7">
+                    <div class="row">
+                      <div class="col-sm-6 form-group">
+                        <input class="form-control" id="ime" name="ime" placeholder="Ime" type="text" required>
+                      </div>
+                      <div class="col-sm-6 form-group">
+                        <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+                      </div>
+                    </div>
+                    <textarea class="form-control" id="komentar" name="komentar" placeholder="Komentar" rows="5"></textarea><br>
+                    <div class="row">
+                      <div class="col-sm-12 form-group">
+                        <button class="btn btn-lg pull-right boja slika" type="submit">Posalji</button>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+</div>
+<div class="container">
+ 
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 style="color:blue;"><span class="glyphicon glyphicon-lock"></span>Prijava</h4>
+        </div>
+        <div class="modal-body">
+          <form role="form">
+            <div class="form-group">
+              <label for="usrname"><span class="glyphicon glyphicon-user"></span> Korisnicko ime</label>
+              <input type="text" class="form-control" id="korisnickoImeUnos" placeholder="Enter username">
+            </div>
+            <div class="form-group">
+              <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
+              <input type="password" class="form-control" id="lozinkaUnos" placeholder="Enter password">
+            </div>
+            
+            <button type="submit" id="loginBtn" class="btn  btn-primary btn-block"><span class="glyphicon glyphicon-off"></span> Login</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          
+          
+          
+        </div>
+      </div>
+    </div>
+  </div> 
+</div>
+<div class="container">
+ 
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModalRegistracija" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 style="color:blue;"><span class="glyphicon glyphicon-lock"></span>Registracija</h4>
+        </div>
+        <div class="modal-body">
+          <form role="form">
+            <div class="form-group">
+              <label for="usrname"><span class="glyphicon glyphicon-user"></span> Korisnicko ime</label>
+              <input type="text" class="form-control" id="korisnickoImeUnosRegistracija" placeholder="Enter username">
+            </div>
+            <div class="form-group">
+              <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
+              <input type="password" class="form-control" id="lozinkaUnosRegistracija" placeholder="Enter password">
+            </div>
+            <div class="form-group">
+              <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Repeat password</label>
+              <input type="password" class="form-control" id="lozinkaPonovljenaUnos" placeholder="Repeat password">
+            </div>
+            <button id="registracijaBtn" type="submit" id="loginBtn" class="btn  btn-primary btn-block"><span class="glyphicon glyphicon-off"></span> Registracija</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+        </div>
+      </div>
+    </div>
+  </div> 
+</div>
+
+<div id="modalObavestenje" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">MAJS AIRLINES</h4>
+      </div>
+      <div class="modal-body">
+        <p>ZABORAVI PROBLEME,REZERVISI NA VREME!!!JEDAN KLIK DO PUTOVANJA IZ SNOVA</p>
+        <p>REGISTRUJTE SE UKOLIKO NEMATE VEC NALOG</p>
+        <form role="form">
+            <div class="form-group">
+              <label for="usrname"> Broj Leta</label>
+              <label class="form-control" id="brojLetaM"></label>
+            </div>
+            <div class="form-group">
+              <label for="psw">Datum polaska</label>
+              <label class="form-control" id="datumPolaskaM"></label>
+            </div>
+            <div class="form-group">
+              <label for="psw">Datum dolaska</label>
+              <label class="form-control" id="datumDolaskaM"></label>
+            </div>
+            <div class="form-group">
+              <label for="psw">Polazni aerodrom</label>
+              <label class="form-control" id="polazniM"></label>
+            </div>
+            <div class="form-group">
+              <label for="psw">Dolazni aerodrom</label>
+              <label class="form-control" id="dolazniM"></label>
+            </div>
+             <div class="form-group">
+              <label for="psw">Broj sedista</label>
+              <label class="form-control" id="brojSedistaM"></label>
+            </div>
+            <div class="form-group">
+              <label for="psw">Broj slobodnih sedistasedista</label>
+              <label class="form-control" id="brojSlobodnihSedistaM"></label>
+            </div>
+            <div class="form-group">
+              <label for="psw">Cena</label>
+              <label class="form-control" id="cenaM"></label>
+            </div>
+            </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+<div id="modalLogin" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">MAJS AIRLINES</h4>
+      </div>
+      <div class="modal-body">
+        <p>Niste uneli ispravno podatke,pokusajte ponovo</p>
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer class="container-fluid text-center">
+        <p>©Copyright MajsAirlines2019</p>
+</footer>
+<script>
+$(function() {
+	  $('#datetimepicker6').datetimepicker({format: "YYYY-MM-DD hh:mm:ss", locale: moment.locale('fr')});
+	  $('#datetimepicker7').datetimepicker({format: "YYYY-MM-DD hh:mm:ss", locale: moment.locale('fr')});
+	});
+	
+function sortTable(n) {
+	  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+	  table = document.getElementById("letoviTabela");
+	  switching = true;
+	  // Set the sorting direction to ascending:
+	  dir = "asc"; 
+	  /* Make a loop that will continue until
+	  no switching has been done: */
+	  while (switching) {
+	    // Start by saying: no switching is done:
+	    switching = false;
+	    rows = table.rows;
+	    /* Loop through all table rows (except the
+	    first, which contains table headers): */
+	    for (i = 1; i < (rows.length - 1); i++) {
+	      // Start by saying there should be no switching:
+	      shouldSwitch = false;
+	      /* Get the two elements you want to compare,
+	      one from current row and one from the next: */
+	      x = rows[i].getElementsByTagName("TD")[n];
+	      y = rows[i + 1].getElementsByTagName("TD")[n];
+	      /* Check if the two rows should switch place,
+	      based on the direction, asc or desc: */
+	      if (dir == "asc") {
+	        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+	          // If so, mark as a switch and break the loop:
+	          shouldSwitch = true;
+	          break;
+	        }
+	      } else if (dir == "desc") {
+	        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+	          // If so, mark as a switch and break the loop:
+	          shouldSwitch = true;
+	          break;
+	        }
+	      }
+	    }
+	    if (shouldSwitch) {
+	      /* If a switch has been marked, make the switch
+	      and mark that a switch has been done: */
+	      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+	      switching = true;
+	      // Each time a switch is done, increase this count by 1:
+	      switchcount ++; 
+	    } else {
+	      /* If no switching has been done AND the direction is "asc",
+	      set the direction to "desc" and run the while loop again. */
+	      if (switchcount == 0 && dir == "asc") {
+	        dir = "desc";
+	        switching = true;
+	      }
+	    }
+	  }
+	}
+</script>
+    
+</body>
+</html>

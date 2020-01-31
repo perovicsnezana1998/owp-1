@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Majs Airlines</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <script src="js/Pocetna.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+</head>
+
+
+<body>
+  <header class="container-fluid">
+    <nav class="navbar navbar-inverse">
+            <div class="navbar-fixed-top container-fluid boja">
+              <div class="navbar-header boja">
+                <a class="navbar-brand" href="#"><img class="slika" src="slike/logo1.png"  style="width:50%"></a>
+              </div>
+              <ul class="nav navbar-nav boja" id="navTekst">
+                <li class="boja"><a href="Pocetna.html" id="navHome">Pocetna</a></li>
+                <li><a id="navONama" href="ONama.html">O nama</a></li>
+                
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+                <li><button type="button" class="btn btn-lg pull-center boja" id="myBtnRegistracija"><span class="glyphicon glyphicon-user"></span> Registracija</button></li>
+                <li><button type="button" class="btn btn-lg pull-center boja" id="myBtn">Prijava<span class="glyphicon glyphicon-log-in"></span></button></li>
+              </ul>
+            </div>
+    </nav>
+</header>
+<main>
+    <div class="container-fluid">
+            <div class="row">
+                    <div class="col-sm-8">
+                      <h2>Kompanija Majs Airlines</h2><br>
+                      <h4>Osnovana 1991 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4><br>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                    <div class="col-sm-4">
+                      <span>
+                              <img class="slika" src="slike/kompanija2.jpg"  style="width:100%">
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="container-fluid bg-grey">
+                  <div class="row">
+                    <div class="col-sm-4">
+                      <span>
+                              <img class="slika" src="slike/kompanija.jpg"  style="width:100%">
+                      </span>
+                    </div>
+                    <div class="col-sm-8">
+                      <h2>Ciljevi</h2><br>
+                      <h4><strong>MISIJA:</strong> Nasa misija lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4><br>
+                      <p><strong>VIZIJA:</strong> Nasa vizija Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                  </div>
+            </div>
+    </div>
+    
+    <div class="container">
+ 
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 style="color:blue;"><span class="glyphicon glyphicon-lock"></span>Prijava</h4>
+        </div>
+        <div class="modal-body">
+          <form role="form">
+            <div class="form-group">
+              <label for="usrname"><span class="glyphicon glyphicon-user"></span> Korisnicko ime</label>
+              <input type="text" class="form-control" id="korisnickoImeUnos" placeholder="Enter username">
+            </div>
+            <div class="form-group">
+              <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
+              <input type="text" class="form-control" id="lozinkaUnos" placeholder="Enter password">
+            </div>
+            
+            <button type="submit" id="loginBtn"class="btn  btn-primary btn-block"><span class="glyphicon glyphicon-off"></span> Login</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          
+          <p>Not a member? <a href="#">Sign Up</a></p>
+          
+        </div>
+      </div>
+    </div>
+  </div> 
+</div>
+<div class="container">
+ 
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModalRegistracija" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 style="color:blue;"><span class="glyphicon glyphicon-lock"></span>Registracija</h4>
+        </div>
+        <div class="modal-body">
+          <form role="form">
+            <div class="form-group">
+              <label for="usrname"><span class="glyphicon glyphicon-user"></span> Korisnicko ime</label>
+              <input type="text" class="form-control" id="korisnickoImeUnosRegistracija" placeholder="Enter username">
+            </div>
+            <div class="form-group">
+              <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
+              <input type="text" class="form-control" id="lozinkaUnosRegistracija" placeholder="Enter password">
+            </div>
+            <div class="form-group">
+              <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
+              <input type="text" class="form-control" id="lozinkaPonovljenaUnos" placeholder="Repeat password">
+            </div>
+            <button id="registracijaBtn" type="submit" id="loginBtn"class="btn  btn-primary btn-block"><span class="glyphicon glyphicon-off"></span> Registracija</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+        </div>
+      </div>
+    </div>
+  </div> 
+</div>
+<div id="modalLogin" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">MAJS AIRLINES</h4>
+      </div>
+      <div class="modal-body">
+        <p>Niste uneli ispravno podatke,pokusajte ponovo</p>
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+    
+</main>
+<footer class="container-fluid text-center">
+        <p>©Copyright &Copy MajsAirlines2019</p>
+</footer>
+    
+</body>
+</html>

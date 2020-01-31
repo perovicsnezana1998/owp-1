@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Majs Airlines</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/js/bootstrap-datetimepicker.min.js"></script>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/css/bootstrap-datetimepicker.min.css">
+      
+  
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   
+    <script src="js/moment.js"></script>
+	<script src="js/Karta3UJednom.js"></script>
+	
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">    
+    
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+</head>
+<body>
+<header class="container-fluid">
+        <nav class="navbar navbar-inverse">
+                <div class="navbar-fixed-top container-fluid boja">
+                  <div class="navbar-header boja">
+                    <a class="navbar-brand" href="#"><img class="slika" src="slike/logo1.png"  style="width:50%"></a>
+                  </div>
+                  
+                  <ul class="nav navbar-nav navbar-right">
+                    
+                    <li><a href="" id="logoutLink"><span class="glyphicon glyphicon-log-out"></span> Odjava</a></li>
+                  </ul>
+                </div>
+        </nav>
+</header>
+
+    <div id="content">
+        <div id="welcomeDiv">
+                <h2> Dobrodosli, <span id="userSpan"></span></h2>   
+        </div>
+    </div>
+<div class="card text-center">
+  <div class="card-header">
+    <h1>FAZA 3</h1>
+  </div>
+  <div class="card-body">
+     	<div id="menu1" class="container">
+      <h3>Kupi ili rezervisi</h3>
+ 
+           <form class="form" action="">
+                                    <div class="form-group">
+              <label for="usrname"> Broj Leta polazni</label>
+              <label class="form-control" id="brojLetaK"></label>
+            </div>
+            <div class="form-group">
+              <label for="psw">Datum polaska</label>
+              <label class="form-control" id="datumPolaskaK"></label>
+            </div>
+            <div class="form-group">
+              <label for="psw">Polazni aerodrom</label>
+              <label class="form-control" id="polazniK"></label>
+            </div>
+           </form> 
+          
+ 
+           <form class="form" action="">
+                                    <div class="form-group">
+                                        <label for="Cena" class="text-white">Cena karte:</label><br>
+                                        <input type="text" name="cena" id="cenaUnos" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="Ime" class="text-white">Ime:</label><br>
+                                        <input type="text" name="ime" id="ime" class="form-control">
+                    
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="Prezime" class="text-white">Prezime:</label><br>
+                                        <input type="text" name="prezime" id="prezime" class="form-control">
+                                    </div>
+                                    <!--div class="form-group">
+                                     <label for="lozinka" class="text-white">Sedista:</label><br> 
+                                     <input type="submit" name="submit" class="btn btn-info btn-md" value="Sedista polazni" id="polazniSedistaDugme">
+                                        <input type="submit" name="submit" class="btn btn-info btn-md" value="Sedista povratni" id="povratniSedistaDugme">  
+                                    </div-->
+                                    <div class="col-md-12" id="sedista" align="center">
+                                    	<div class="col-md-6" id="sedistaPolazni" align="center"></div>
+                                    	
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="button" name="submit" class="btn btn-md pull-center boja slika" value="Rezervisi" id="rezervisiDugme">
+                                        <input type="button" name="submit" class="btn btn-md pull-center boja slika" value="Kupi" id="kupiDugme">
+                                        <input type="button" name="submit" class="btn btn-md pull-center boja slika" value="Odustani" id="odustaniKarta">
+                                    </div>
+      </form>
+ 
+ 
+
+
+</div>
+<div id="modalUzivaj" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">MAJS AIRLINES</h4>
+      </div>
+      <div class="modal-body">
+        <p>Uzeli ste kartu,dodjite nam opet!!!Uzivajte na odabranom letu</p>
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>

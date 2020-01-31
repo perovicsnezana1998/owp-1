@@ -1,0 +1,58 @@
+﻿body{ 
+    background-image: url("../slike/slike/sky.jpg");
+    font-family: 'Times New Roman', Times, serif;
+}
+main{
+    padding-top: 15px;
+}
+.boja{
+    background-color: #007bff;
+}
+ th {
+  cursor: pointer;
+}
+
+#navHome,#navONama,#navUsluge{
+    color:rgba(0,0,0,0.5);
+}
+a{
+	color:black;
+}
+
+a.boja{
+    color: rgba(0,0,0,0.5);
+}
+
+.bojaCard{
+    background-color: white;
+}
+.slika{
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+          box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+}
+.tabela{
+    padding-top: 30px;
+}
+.modal-header{
+	background-color: #007bff;
+}
+#welcomeDiv {
+	background: rgb(255, 255, 255);
+	font-size: 30px;
+	color: #007bff;
+	padding: 5px 50px 5px 10px;
+	float: right;
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.8);
+    
+}
+.welcome{
+    padding-top: 60px; 
+}
+#kartaWindow {
+    
+	width: 900px;
+	height: 500px;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+}
+

@@ -1,0 +1,65 @@
+[2020-01-24 14:52:59.155] [exthost] [info] extension host started
+[2020-01-24 14:53:00.525] [exthost] [info] extension host started
+[2020-01-24 14:53:00.580] [exthost] [info] ExtensionService#_doActivateExtension HookyQR.beautify {"startup":true,"activationEvent":"*"}
+[2020-01-24 14:53:00.581] [exthost] [info] ExtensionService#loadCommonJSModule C:\Users\Borko\.p2\pool\plugins\pack.core.win_3.5.0.201909121914\HookyQR.beautify-1.4.11\extension
+[2020-01-24 14:53:00.815] [exthost] [info] ExtensionService#_doActivateExtension christian-kohler.path-intellisense {"startup":true,"activationEvent":"*"}
+[2020-01-24 14:53:00.815] [exthost] [info] ExtensionService#loadCommonJSModule C:\Users\Borko\.codemix\extensions\christian-kohler.path-intellisense-1.4.2\out\src\extension
+[2020-01-24 14:53:00.881] [exthost] [info] ExtensionService#_doActivateExtension dbaeumer.vscode-eslint {"startup":true,"activationEvent":"*"}
+[2020-01-24 14:53:00.881] [exthost] [info] ExtensionService#loadCommonJSModule C:\Users\Borko\.codemix\extensions\dbaeumer.vscode-eslint-1.9.0\client\out\extension
+[2020-01-24 14:53:00.986] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch {"startup":true,"activationEvent":"*"}
+[2020-01-24 14:53:00.986] [exthost] [info] ExtensionService#loadCommonJSModule c:\Users\Borko\.p2\pool\plugins\com.genuitec.eclipse.code.engine.app.win32.x86_64_3.5.0.201909181300\engine\resources\app\extensions\debug-auto-launch\dist\extension
+[2020-01-24 14:53:00.997] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet {"startup":true,"activationEvent":"*"}
+[2020-01-24 14:53:00.997] [exthost] [info] ExtensionService#loadCommonJSModule c:\Users\Borko\.p2\pool\plugins\com.genuitec.eclipse.code.engine.app.win32.x86_64_3.5.0.201909181300\engine\resources\app\extensions\emmet\dist\extension
+[2020-01-24 14:53:01.045] [exthost] [info] ExtensionService#_doActivateExtension formulahendry.auto-close-tag {"startup":true,"activationEvent":"*"}
+[2020-01-24 14:53:01.045] [exthost] [info] ExtensionService#loadCommonJSModule C:\Users\Borko\.codemix\extensions\formulahendry.auto-close-tag-0.5.6\out\src\extension
+[2020-01-24 14:53:01.050] [exthost] [info] ExtensionService#_doActivateExtension formulahendry.auto-rename-tag {"startup":true,"activationEvent":"*"}
+[2020-01-24 14:53:01.050] [exthost] [info] ExtensionService#loadCommonJSModule C:\Users\Borko\.codemix\extensions\formulahendry.auto-rename-tag-0.0.15\out\src\extension
+[2020-01-24 14:53:01.061] [exthost] [info] ExtensionService#_doActivateExtension vscode.grunt {"startup":false,"activationEvent":"onCommand:workbench.action.tasks.runTask"}
+[2020-01-24 14:53:01.061] [exthost] [info] ExtensionService#loadCommonJSModule c:\Users\Borko\.p2\pool\plugins\com.genuitec.eclipse.code.engine.app.win32.x86_64_3.5.0.201909181300\engine\resources\app\extensions\grunt\dist\main
+[2020-01-24 14:53:01.073] [exthost] [info] ExtensionService#_doActivateExtension vscode.gulp {"startup":false,"activationEvent":"onCommand:workbench.action.tasks.runTask"}
+[2020-01-24 14:53:01.073] [exthost] [info] ExtensionService#loadCommonJSModule c:\Users\Borko\.p2\pool\plugins\com.genuitec.eclipse.code.engine.app.win32.x86_64_3.5.0.201909181300\engine\resources\app\extensions\gulp\dist\main
+[2020-01-24 14:53:01.086] [exthost] [info] ExtensionService#_doActivateExtension vscode.jake {"startup":false,"activationEvent":"onCommand:workbench.action.tasks.runTask"}
+[2020-01-24 14:53:01.086] [exthost] [info] ExtensionService#loadCommonJSModule c:\Users\Borko\.p2\pool\plugins\com.genuitec.eclipse.code.engine.app.win32.x86_64_3.5.0.201909181300\engine\resources\app\extensions\jake\dist\main
+[2020-01-24 14:53:01.098] [exthost] [info] ExtensionService#_doActivateExtension vscode.npm {"startup":false,"activationEvent":"onCommand:workbench.action.tasks.runTask"}
+[2020-01-24 14:53:01.098] [exthost] [info] ExtensionService#loadCommonJSModule c:\Users\Borko\.p2\pool\plugins\com.genuitec.eclipse.code.engine.app.win32.x86_64_3.5.0.201909181300\engine\resources\app\extensions\npm\dist\main
+[2020-01-24 14:53:01.158] [exthost] [info] ExtensionService#_doActivateExtension vscode.typescript-language-features {"startup":false,"activationEvent":"onCommand:workbench.action.tasks.runTask"}
+[2020-01-24 14:53:01.158] [exthost] [info] ExtensionService#loadCommonJSModule c:\Users\Borko\.p2\pool\plugins\com.genuitec.eclipse.code.engine.app.win32.x86_64_3.5.0.201909181300\engine\resources\app\extensions\typescript-language-features\dist\extension
+[2020-01-24 14:53:01.390] [exthost] [info] eager extensions activated
+[2020-01-24 15:05:36.506] [exthost] [info] ExtensionService#_doActivateExtension vscode.configuration-editing {"startup":false,"activationEvent":"onLanguage:jsonc"}
+[2020-01-24 15:05:36.506] [exthost] [info] ExtensionService#loadCommonJSModule c:\Users\Borko\.p2\pool\plugins\com.genuitec.eclipse.code.engine.app.win32.x86_64_3.5.0.201909181300\engine\resources\app\extensions\configuration-editing\dist\extension
+[2020-01-24 15:05:36.532] [exthost] [info] ExtensionService#_doActivateExtension vscode.json-language-features {"startup":false,"activationEvent":"onLanguage:jsonc"}
+[2020-01-24 15:05:36.533] [exthost] [info] ExtensionService#loadCommonJSModule c:\Users\Borko\.p2\pool\plugins\com.genuitec.eclipse.code.engine.app.win32.x86_64_3.5.0.201909181300\engine\resources\app\extensions\json-language-features\client\dist\jsonMain
+[2020-01-24 15:05:41.367] [exthost] [info] extension host started
+[2020-01-24 15:05:41.425] [exthost] [info] ExtensionService#_doActivateExtension HookyQR.beautify {"startup":true,"activationEvent":"*"}
+[2020-01-24 15:05:41.425] [exthost] [info] ExtensionService#loadCommonJSModule C:\Users\Borko\.p2\pool\plugins\pack.core.win_3.5.0.201909121914\HookyQR.beautify-1.4.11\extension
+[2020-01-24 15:05:41.559] [exthost] [info] ExtensionService#_doActivateExtension christian-kohler.path-intellisense {"startup":true,"activationEvent":"*"}
+[2020-01-24 15:05:41.559] [exthost] [info] ExtensionService#loadCommonJSModule C:\Users\Borko\.codemix\extensions\christian-kohler.path-intellisense-1.4.2\out\src\extension
+[2020-01-24 15:05:41.606] [exthost] [info] ExtensionService#_doActivateExtension dbaeumer.vscode-eslint {"startup":true,"activationEvent":"*"}
+[2020-01-24 15:05:41.606] [exthost] [info] ExtensionService#loadCommonJSModule C:\Users\Borko\.codemix\extensions\dbaeumer.vscode-eslint-1.9.0\client\out\extension
+[2020-01-24 15:05:41.642] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch {"startup":true,"activationEvent":"*"}
+[2020-01-24 15:05:41.642] [exthost] [info] ExtensionService#loadCommonJSModule c:\Users\Borko\.p2\pool\plugins\com.genuitec.eclipse.code.engine.app.win32.x86_64_3.5.0.201909181300\engine\resources\app\extensions\debug-auto-launch\dist\extension
+[2020-01-24 15:05:41.650] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet {"startup":true,"activationEvent":"*"}
+[2020-01-24 15:05:41.650] [exthost] [info] ExtensionService#loadCommonJSModule c:\Users\Borko\.p2\pool\plugins\com.genuitec.eclipse.code.engine.app.win32.x86_64_3.5.0.201909181300\engine\resources\app\extensions\emmet\dist\extension
+[2020-01-24 15:05:41.665] [exthost] [info] ExtensionService#_doActivateExtension formulahendry.auto-close-tag {"startup":true,"activationEvent":"*"}
+[2020-01-24 15:05:41.665] [exthost] [info] ExtensionService#loadCommonJSModule C:\Users\Borko\.codemix\extensions\formulahendry.auto-close-tag-0.5.6\out\src\extension
+[2020-01-24 15:05:41.669] [exthost] [info] ExtensionService#_doActivateExtension formulahendry.auto-rename-tag {"startup":true,"activationEvent":"*"}
+[2020-01-24 15:05:41.669] [exthost] [info] ExtensionService#loadCommonJSModule C:\Users\Borko\.codemix\extensions\formulahendry.auto-rename-tag-0.0.15\out\src\extension
+[2020-01-24 15:05:41.687] [exthost] [info] ExtensionService#_doActivateExtension vscode.html-language-features {"startup":false,"activationEvent":"onLanguage:html"}
+[2020-01-24 15:05:41.687] [exthost] [info] ExtensionService#loadCommonJSModule c:\Users\Borko\.p2\pool\plugins\com.genuitec.eclipse.code.engine.app.win32.x86_64_3.5.0.201909181300\engine\resources\app\extensions\html-language-features\client\dist\htmlMain
+[2020-01-24 15:05:41.889] [exthost] [info] ExtensionService#_doActivateExtension mkaufman.HTMLHint {"startup":false,"activationEvent":"onLanguage:html"}
+[2020-01-24 15:05:41.890] [exthost] [info] ExtensionService#loadCommonJSModule C:\Users\Borko\.codemix\extensions\mkaufman.htmlhint-0.6.0\out\extension
+[2020-01-24 15:05:42.114] [exthost] [info] ExtensionService#_doActivateExtension vscode.grunt {"startup":false,"activationEvent":"onCommand:workbench.action.tasks.runTask"}
+[2020-01-24 15:05:42.114] [exthost] [info] ExtensionService#loadCommonJSModule c:\Users\Borko\.p2\pool\plugins\com.genuitec.eclipse.code.engine.app.win32.x86_64_3.5.0.201909181300\engine\resources\app\extensions\grunt\dist\main
+[2020-01-24 15:05:42.123] [exthost] [info] ExtensionService#_doActivateExtension vscode.gulp {"startup":false,"activationEvent":"onCommand:workbench.action.tasks.runTask"}
+[2020-01-24 15:05:42.123] [exthost] [info] ExtensionService#loadCommonJSModule c:\Users\Borko\.p2\pool\plugins\com.genuitec.eclipse.code.engine.app.win32.x86_64_3.5.0.201909181300\engine\resources\app\extensions\gulp\dist\main
+[2020-01-24 15:05:42.132] [exthost] [info] ExtensionService#_doActivateExtension vscode.jake {"startup":false,"activationEvent":"onCommand:workbench.action.tasks.runTask"}
+[2020-01-24 15:05:42.132] [exthost] [info] ExtensionService#loadCommonJSModule c:\Users\Borko\.p2\pool\plugins\com.genuitec.eclipse.code.engine.app.win32.x86_64_3.5.0.201909181300\engine\resources\app\extensions\jake\dist\main
+[2020-01-24 15:05:42.142] [exthost] [info] ExtensionService#_doActivateExtension vscode.npm {"startup":false,"activationEvent":"onCommand:workbench.action.tasks.runTask"}
+[2020-01-24 15:05:42.142] [exthost] [info] ExtensionService#loadCommonJSModule c:\Users\Borko\.p2\pool\plugins\com.genuitec.eclipse.code.engine.app.win32.x86_64_3.5.0.201909181300\engine\resources\app\extensions\npm\dist\main
+[2020-01-24 15:05:42.163] [exthost] [info] ExtensionService#_doActivateExtension vscode.typescript-language-features {"startup":false,"activationEvent":"onCommand:workbench.action.tasks.runTask"}
+[2020-01-24 15:05:42.163] [exthost] [info] ExtensionService#loadCommonJSModule c:\Users\Borko\.p2\pool\plugins\com.genuitec.eclipse.code.engine.app.win32.x86_64_3.5.0.201909181300\engine\resources\app\extensions\typescript-language-features\dist\extension
+[2020-01-24 15:05:42.223] [exthost] [info] ExtensionService#_doActivateExtension vscode.configuration-editing {"startup":false,"activationEvent":"onLanguage:jsonc"}
+[2020-01-24 15:05:42.223] [exthost] [info] ExtensionService#loadCommonJSModule c:\Users\Borko\.p2\pool\plugins\com.genuitec.eclipse.code.engine.app.win32.x86_64_3.5.0.201909181300\engine\resources\app\extensions\configuration-editing\dist\extension
+[2020-01-24 15:05:42.244] [exthost] [info] ExtensionService#_doActivateExtension vscode.json-language-features {"startup":false,"activationEvent":"onLanguage:jsonc"}
+[2020-01-24 15:05:42.244] [exthost] [info] ExtensionService#loadCommonJSModule c:\Users\Borko\.p2\pool\plugins\com.genuitec.eclipse.code.engine.app.win32.x86_64_3.5.0.201909181300\engine\resources\app\extensions\json-language-features\client\dist\jsonMain
+[2020-01-24 15:05:42.620] [exthost] [info] eager extensions activated
