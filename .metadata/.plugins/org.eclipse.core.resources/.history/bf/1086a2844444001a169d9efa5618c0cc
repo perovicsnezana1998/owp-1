@@ -1,0 +1,14 @@
+package cinema.Model;
+
+import java.util.Date;
+
+public class Ticket {
+	
+	private int id;
+	private Projection projectionId;
+	private Seat seatId;
+	private Date date;
+	private User userId;
+	
+
+}

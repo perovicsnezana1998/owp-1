@@ -1,0 +1,19 @@
+package cinema.Model;
+
+import java.util.Date;
+
+public class User {
+
+	private enum Role{
+		korisnik,administrator
+	}
+
+	private int id;
+	private String username;
+	private String password;
+	private Date registrationDate;
+	private Role role;
+	
+	
+
+}

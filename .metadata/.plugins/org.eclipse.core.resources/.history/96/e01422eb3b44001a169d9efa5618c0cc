@@ -1,0 +1,5 @@
+package cinema.Status;
+
+public class LogoutServlet {
+
+}

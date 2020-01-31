@@ -1,0 +1,9 @@
+package cinema.Model;
+
+public class Seat {
+	
+	private int id;
+	private Hall hallId;
+	private Projection projectionId;
+
+}
