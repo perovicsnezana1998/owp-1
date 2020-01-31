@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class User {
 
-	private enum Role{
+	public enum Role{
 		korisnik,administrator
 	}
 
@@ -13,15 +13,17 @@ public class User {
 	private String password;
 	private Date registrationDate;
 	private Role role;
+	private boolean deleted;
 	
 	
-	public User(int id, String username, String password, Date registrationDate, Role role) {
+	public User(int id, String username, String password, Date registrationDate, Role role, boolean deleted) {
 		super();
 		this.id = id;
 		this.username = username;
 		this.password = password;
 		this.registrationDate = registrationDate;
 		this.role = role;
+		this.deleted = false;
 	}
 
 
@@ -72,6 +74,18 @@ public class User {
 
 	public void setRole(Role role) {
 		this.role = role;
+	}
+	
+	
+
+
+	public boolean isDeleted() {
+		return deleted;
+	}
+
+
+	public void setDeleted(boolean deleted) {
+		this.deleted = deleted;
 	}
 
 

@@ -1,101 +1,102 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Login Page</title>
-   <!--Made with love by Mutiullah Samim -->
-   
-	<!--Bootsrap 4 CDN-->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <head>
+        <title>Login Page</title>
+    <!--Made with love by Mutiullah Samim -->
     
-    <!--Fontawesome CDN-->
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+        <!--Bootsrap 4 CDN-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        
+        <!--Fontawesome CDN-->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
-	<!--Custom styles-->
-	<link rel="stylesheet" type="text/css" href="Login.css">
-</head>
-<body>
+        <!--Custom styles-->
+        <link rel="stylesheet" type="text/css" href="css/Login.css">
+        <script src="js/Login.js"></script>
+    </head>
+    <body>
 
-    <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="Pocetna.html"><img id="logo" src="img/logo.png"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" date-target="#navbarResponsive">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="Pocetna.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Tickets.html">Tickets</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Movies.html">Movies</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="About.html">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Nesto</a>
-                    </li>
-                    <li></li>
-                    <li></li>
-                    <li>
-                        <a class="nav-link" href="Login.html">Login</a> 
-                    </li>
-                    <li><a class="nav-link" href="Registration.html">Register</a>
-                    </li>
-                </ul>
-                
+        <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="Pocetna.html"><img id="logo" src="img/logo.png"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" date-target="#navbarResponsive">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="Pocetna.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Tickets.html">Tickets</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Movies.html">Movies</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="About.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Projections.html">Nesto</a>
+                        </li>
+                        <li></li>
+                        <li></li>
+                        <li>
+                            <a class="nav-link" href="Login.html">Login</a> 
+                        </li>
+                        <li><a class="nav-link" href="Registration.html">Register</a>
+                        </li>
+                    </ul>
+                    
+                </div>
+            </div>
+        </nav>
+
+        <div class="container">
+            <div class="d-flex justify-content-center h-100">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Sign In</h3>
+                        <div class="d-flex justify-content-end social_icon">
+                            <span><i class="fab fa-facebook-square"></i></span>
+                            <span><i class="fab fa-google-plus-square"></i></span>
+                            <span><i class="fab fa-twitter-square"></i></span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="input-group form-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="username" id="usernameInput">
+                                
+                            </div>
+                            <div class="input-group form-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-key"></i></span>
+                                </div>
+                                <input type="password" class="form-control" placeholder="password" id="passwordInput">
+                            </div>
+                            <div class="row align-items-center remember">
+                                <input type="checkbox">Remember Me
+                            </div>
+                            <div class="form-group">
+                                <input id="loginBtn" type="submit" value="Login" class="btn float-right login_btn">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="card-footer">
+                        <div class="d-flex justify-content-center links">
+                            Don't have an account?<a href="Registration.html">Sign Up</a>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <a href="#">Forgot your password?</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </nav>
-
-<div class="container">
-	<div class="d-flex justify-content-center h-100">
-		<div class="card">
-			<div class="card-header">
-				<h3>Sign In</h3>
-				<div class="d-flex justify-content-end social_icon">
-					<span><i class="fab fa-facebook-square"></i></span>
-					<span><i class="fab fa-google-plus-square"></i></span>
-					<span><i class="fab fa-twitter-square"></i></span>
-				</div>
-			</div>
-			<div class="card-body">
-				<form>
-					<div class="input-group form-group">
-						<div class="input-group-prepend">
-							<span class="input-group-text"><i class="fas fa-user"></i></span>
-						</div>
-						<input type="text" class="form-control" placeholder="username">
-						
-					</div>
-					<div class="input-group form-group">
-						<div class="input-group-prepend">
-							<span class="input-group-text"><i class="fas fa-key"></i></span>
-						</div>
-						<input type="password" class="form-control" placeholder="password">
-					</div>
-					<div class="row align-items-center remember">
-						<input type="checkbox">Remember Me
-					</div>
-					<div class="form-group">
-						<input type="submit" value="Login" class="btn float-right login_btn">
-					</div>
-				</form>
-			</div>
-			<div class="card-footer">
-				<div class="d-flex justify-content-center links">
-					Don't have an account?<a href="Registration.html">Sign Up</a>
-				</div>
-				<div class="d-flex justify-content-center">
-					<a href="#">Forgot your password?</a>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
 
 
 
@@ -104,46 +105,46 @@
 
 
 
-    <footer>
-    <div class="container-fluid padding">
-    <div class="row text-center">
-        <div class="col-md-4">
-            <img src="img/logo2.png">
-            <hr class="light">
-            <p>555-555-5555</p>
-            <p>ebailex@email.com</p>
-            <p>100 Steet Name</p>
-            <p>Citiy name</p>
-        </div>
-        <div class="col-md-4">
-            <hr class="light">
-            <h5>Our Hours</h5>
-            <hr class="light">
-            <p>Monday 10am-10pm</p>
-            <p>Saturday 11am-11pm</p>
-            <p>Sunday: closed</p>
-        </div>
-        <div class="col-md-4">
-            <hr class="light">
-            <h5>Our Hours</h5>
-            <hr class="light">
-            <p>City State, 0000</p>
-            <p>City State, 0000</p>
-            <p>City State, 0000</p>
-            <p>City State, 0000</p>
-        </div>
-        <div class="col-12">
-            <hr class="light">
-            <h5>&copy; jevTEATRO.com</h5>
-        </div>
-    </div>
-    </div>
-    </footer>
+        <footer>
+            <div class="container-fluid padding">
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <img src="img/logo2.png">
+                    <hr class="light">
+                    <p>555-555-5555</p>
+                    <p>ebailex@email.com</p>
+                    <p>100 Steet Name</p>
+                    <p>Citiy name</p>
+                </div>
+                <div class="col-md-4">
+                    <hr class="light">
+                    <h5>Our Hours</h5>
+                    <hr class="light">
+                    <p>Monday 10am-10pm</p>
+                    <p>Saturday 11am-11pm</p>
+                    <p>Sunday: closed</p>
+                </div>
+                <div class="col-md-4">
+                    <hr class="light">
+                    <h5>Our Hours</h5>
+                    <hr class="light">
+                    <p>City State, 0000</p>
+                    <p>City State, 0000</p>
+                    <p>City State, 0000</p>
+                    <p>City State, 0000</p>
+                </div>
+                <div class="col-12">
+                    <hr class="light">
+                    <h5>&copy; jevTEATRO.com</h5>
+                </div>
+            </div>
+            </div>
+        </footer>
 
 
-   
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-</body>
+    
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </body>
 </html>

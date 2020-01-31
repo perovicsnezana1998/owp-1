@@ -29,22 +29,24 @@ public class LoginServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
+		
+		doPost(request, response);
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String korisnickoIme = request.getParameter("korisnickoIme");
-		String lozinka = request.getParameter("lozinka");
+		String username = request.getParameter("username");
+		String password = request.getParameter("password");
 		
 		
-		if(korisnickoIme.equals("")||lozinka.equals("")) {
+		if(username.equals("")||password.equals("")) {
 			request.getRequestDispatcher("./FailureServlet").forward(request, response);
 			
 			return;
 		}
-		if(korisnickoIme.equals("")&&lozinka.equals("")) {
+		if(username.equals("")&&password.equals("")) {
 			request.getRequestDispatcher("./FailureServlet").forward(request, response);
 			
 			return;
@@ -55,14 +57,14 @@ public class LoginServlet extends HttpServlet {
 		
 		
 		
-		User user = UserDAO.get(korisnickoIme, lozinka);
+		User user = UserDAO.get(username, password);
 		if(user==null) {
 			
 			request.getRequestDispatcher("./FailureServlet").forward(request, response);
 	
 			return;
 		}
-		request.getSession().setAttribute("ulogovaniKorisnikKI", korisnik.getKorisnickoIme());
+		request.getSession().setAttribute("loggedInUser", user.getUsername());
 
 		request.getRequestDispatcher("./SuccessServlet").forward(request, response);
 		return;
