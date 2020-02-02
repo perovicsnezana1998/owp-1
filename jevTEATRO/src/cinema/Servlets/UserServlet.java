@@ -20,12 +20,7 @@ public class UserServlet extends HttpServlet {
        
     /**
      * @see HttpServlet#HttpServlet()
-     */
-    public UserServlet() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
-
+  
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
@@ -39,8 +34,8 @@ public class UserServlet extends HttpServlet {
 			request.getRequestDispatcher("./LogoutServlet").forward(request, response);
 			return;
 		}
-		User loggedInUser1 = UserDAO.get(loggedInUser.getUsername(),loggedInUser.getPassword());
-		if (loggedInUser1 == null) {
+		loggedInUser = UserDAO.get(loggedInUser.getUsername());
+		if (loggedInUser == null) {
 			request.getRequestDispatcher("./LogoutServlet").forward(request, response);
 			return;
 		}
@@ -60,8 +55,8 @@ public class UserServlet extends HttpServlet {
 			}
 			/*
 			case "all": {
-				List<Korisnik> korisnici = KorisnikDAO.getAll();
-				data.put("korisnici", korisnici);
+				List<User> users = UserDAO.getAll();
+				data.put("users", users);
 				break;
 			}
 			case "pojedinacni": {

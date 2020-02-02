@@ -24,7 +24,7 @@ public class ConnectionManager {
 	public static void open() {
 		try {
 			Class.forName("org.sqlite.JDBC");
-			connection = DriverManager.getConnection("jdcb:sqlite" + PATH);	
+			connection = DriverManager.getConnection("jdcb:sqlite:" + PATH);	
 		}catch (Exception e) {
 			e.printStackTrace();
 		}

@@ -1,9 +1,10 @@
 package cinema.DAO;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.util.Date;
+
 
 import cinema.Model.User;
 
@@ -16,8 +17,8 @@ public class UserDAO {
 		PreparedStatement pstmt = null;
 		ResultSet rset=null;
 		try {
-			String query = "SELECT Id,RegistrationDate,Role WHERE Username=? AND Password=? AND Deleted=?;";
-			
+			String query = "SELECT Id,Role from Users WHERE Username=? AND Password=? AND Deleted=?";
+			System.out.println("BLABAL");
 			pstmt=conn.prepareStatement(query);
 			int index = 1;
 			
@@ -26,14 +27,19 @@ public class UserDAO {
 			Boolean deleted = false;
 			pstmt.setBoolean(index ++, deleted);
 			System.out.println(pstmt);
+			System.out.println("bb");
 			rset=pstmt.executeQuery();
+			
+			System.out.println("BLABAL2");
 			if(rset.next()) {
 				int id = rset.getInt(1);
-				Date RegistrationDate=rset.getDate(2);
-				System.out.println(RegistrationDate);
-				User.Role role = User.Role.valueOf(rset.getString(3));
+				User.Role role = User.Role.valueOf(rset.getString(2));
 				System.out.println(role);
-				return new User(id,username,password,RegistrationDate,role,deleted);
+				
+				System.out.println("babbaabab3");
+
+				 
+				return new User(id,username,role);
 			}
 			
 		} catch (Exception e) {
@@ -47,7 +53,79 @@ public class UserDAO {
 				
 		return null;
 	}
-	
+
+	public static User get(String username) {
+		// TODO Auto-generated method stub
+		Connection conn = ConnectionManager.getConnection();
+		PreparedStatement pstmt = null;
+		ResultSet rset=null;
+		try {
+			String query = "SELECT Id,Role from Users WHERE Username=? AND Deleted=?";
+			System.out.println("BLABAL");
+			pstmt=conn.prepareStatement(query);
+			int index = 1;
+			
+			pstmt.setString(index ++, username);
+			
+			Boolean deleted = false;
+			pstmt.setBoolean(index ++, deleted);
+			System.out.println(pstmt);
+			rset=pstmt.executeQuery();
+			
+			System.out.println("BLABAL2");
+			if(rset.next()) {
+				int id = rset.getInt(1);
+				User.Role role = User.Role.valueOf(rset.getString(2));
+				System.out.println(role);
+				
+				System.out.println("babbaabab3");
+
+				 
+				return new User(id,username,role);
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally{
+			try {pstmt.close();} catch (Exception ex1) {ex1.printStackTrace();}
+			try {rset.close();} catch (Exception ex1) {ex1.printStackTrace();}
+			try {conn.close();} catch (Exception ex1) {ex1.printStackTrace();} 
+			
+		}
+				
+		return null;
+	}
+
+	public static boolean add(User user) {
+		
+		Connection conn = ConnectionManager.getConnection();
+		
+
+		PreparedStatement pstmt = null;
+		try {
+			String query = "INSERT INTO users  VALUES (?,?,?,?,?,?);";
+			
+			pstmt = conn.prepareStatement(query);
+			int index = 1;
+			pstmt.setString(index++, user.getUsername());
+			pstmt.setString(index ++, user.getPassword());
+			pstmt.setDate(index++, (Date) user.getRegistrationDate());
+			pstmt.setString(index++, user.getRole().toString());
+			pstmt.setBoolean(index++, user.isDeleted());
+
+			
+			System.out.println(pstmt);
+
+			return pstmt.executeUpdate() == 1;
+		} catch (Exception ex) {
+			ex.printStackTrace();
+		} finally {
+			try {pstmt.close();} catch (Exception ex1) {ex1.printStackTrace();}
+			try {conn.close();} catch (Exception ex1) {ex1.printStackTrace();} 
+		}
+		return false;
+		
+	}
 	
 
 }

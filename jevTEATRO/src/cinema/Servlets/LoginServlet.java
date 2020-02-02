@@ -28,6 +28,8 @@ public class LoginServlet extends HttpServlet {
 		String password = request.getParameter("password");
 		
 		
+		
+		
 		if(username.equals("")||password.equals("")) {
 			request.getRequestDispatcher("./FailureServlet").forward(request, response);
 			

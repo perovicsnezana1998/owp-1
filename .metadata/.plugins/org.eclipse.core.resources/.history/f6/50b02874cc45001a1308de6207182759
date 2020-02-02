@@ -1,0 +1,98 @@
+package cinema.DAO;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.Date;
+
+import cinema.Model.User;
+
+public class UserDAO {
+	
+	
+	public static User get(String username,String password) {
+		
+		Connection conn = ConnectionManager.getConnection();
+		PreparedStatement pstmt = null;
+		ResultSet rset=null;
+		try {
+			String query = "SELECT Id,Role from Users WHERE Username=? AND Password=? AND Deleted=?;";
+			System.out.println("BLABAL");
+			pstmt=conn.prepareStatement(query);
+			int index = 1;
+			
+			pstmt.setString(index ++, username);
+			pstmt.setString(index ++, password);
+			Boolean deleted = false;
+			pstmt.setBoolean(index ++, deleted);
+			System.out.println(pstmt);
+			rset=pstmt.executeQuery();
+			
+			System.out.println("BLABAL2");
+			if(rset.next()) {
+				int id = rset.getInt(1);
+				User.Role role = User.Role.valueOf(rset.getString(2));
+				System.out.println(role);
+				
+				System.out.println("babbaabab3");
+
+				 
+				return new User(id,username,role);
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally{
+			try {pstmt.close();} catch (Exception ex1) {ex1.printStackTrace();}
+			try {rset.close();} catch (Exception ex1) {ex1.printStackTrace();}
+			try {conn.close();} catch (Exception ex1) {ex1.printStackTrace();} 
+			
+		}
+				
+		return null;
+	}
+
+	public static User get(String username) {
+		// TODO Auto-generated method stub
+		Connection conn = ConnectionManager.getConnection();
+		PreparedStatement pstmt = null;
+		ResultSet rset=null;
+		try {
+			String query = "SELECT Id,Role from Users WHERE Username=? AND Password=? AND Deleted=?;";
+			System.out.println("BLABAL");
+			pstmt=conn.prepareStatement(query);
+			int index = 1;
+			
+			pstmt.setString(index ++, username);
+			pstmt.setString(index ++, password);
+			Boolean deleted = false;
+			pstmt.setBoolean(index ++, deleted);
+			System.out.println(pstmt);
+			rset=pstmt.executeQuery();
+			
+			System.out.println("BLABAL2");
+			if(rset.next()) {
+				int id = rset.getInt(1);
+				User.Role role = User.Role.valueOf(rset.getString(2));
+				System.out.println(role);
+				
+				System.out.println("babbaabab3");
+
+				 
+				return new User(id,username,role);
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally{
+			try {pstmt.close();} catch (Exception ex1) {ex1.printStackTrace();}
+			try {rset.close();} catch (Exception ex1) {ex1.printStackTrace();}
+			try {conn.close();} catch (Exception ex1) {ex1.printStackTrace();} 
+			
+		}
+				
+		return null;
+	}
+	
+
+}

@@ -5,7 +5,7 @@ import java.util.Date;
 public class User {
 
 	public enum Role{
-		korisnik,administrator
+		user,admin
 	}
 
 	private int id;
@@ -25,6 +25,37 @@ public class User {
 		this.role = role;
 		this.deleted = false;
 	}
+
+
+	
+
+
+	public User(int id, String username, Role role) {
+		super();
+		this.id = id;
+		this.username = username;
+		this.role = role;
+	}
+
+
+
+
+
+
+
+
+
+	public User(String username, String password, Date registrationDate, Role role, boolean deleted) {
+		super();
+		this.username = username;
+		this.password = password;
+		this.registrationDate = registrationDate;
+		this.role = role;
+		this.deleted = deleted;
+	}
+
+
+
 
 
 	public int getId() {

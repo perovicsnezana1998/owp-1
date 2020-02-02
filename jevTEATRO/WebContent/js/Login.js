@@ -1,3 +1,4 @@
+
 $(document).ready(function() {
 
 
@@ -31,7 +32,7 @@ $(document).ready(function() {
             }
             
 
-            $.post('/LoginServlet', params, function(data) {
+            $.post('LoginServlet', params, function(data) {
                 console.log('stigao odgovor!')
                 alert("doslo je do loginServleta");
 
