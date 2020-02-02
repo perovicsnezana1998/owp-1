@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 4 elements to &apos;js&apos;&#x0D;&#x0A;- Original project: &apos;MajsAirlinesWEB&apos;&#x0D;&#x0A;- Destination element: &apos;js&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     jquery-3.3.1.js&#x0D;&#x0A;     jquery.datetimepicker.css&#x0D;&#x0A;     jquery-3.3.1.min.js&#x0D;&#x0A;     jquery.datetimepicker.js" description="Copy files" element1="WebContent/js/jquery-3.3.1.js" element2="WebContent/js/jquery.datetimepicker.css" element3="WebContent/js/jquery-3.3.1.min.js" element4="WebContent/js/jquery.datetimepicker.js" files="4" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1580642542961" target="/jevTEATRO/WebContent/js" units="0" version="1.0"/>
+</session>

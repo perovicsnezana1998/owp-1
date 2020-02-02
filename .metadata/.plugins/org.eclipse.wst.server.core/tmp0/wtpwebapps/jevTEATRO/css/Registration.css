@@ -1,11 +1,21 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
 
-html{
+html,body{
+    background-image: url('http://getwallpapers.com/wallpaper/full/9/5/a/583712.jpg');
+    background-size: cover;
     height: 100%;
     width: 100%;
-    font-family: 'Poppins' , sans-serif;
+    font-family: 'Numans', sans-serif;
     color: #222;
 
+
+}
+
+
+
+.registrationForm{
+    color:white;
+    padding: 3rem;
 }
 
 
@@ -38,9 +48,6 @@ html{
     font-family: initial;
 }
 
-.ble{
-    padding: 2rem;
-}
 
 
 

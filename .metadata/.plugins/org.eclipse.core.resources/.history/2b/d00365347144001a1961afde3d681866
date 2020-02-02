@@ -1,0 +1,77 @@
+$(document).ready(function() {
+
+		var usernameInput = $('#usernameInput');
+		var passwordInput = $('#passwordInput');
+
+		$('#loginBtn').on('click', function(event) {
+            alert("USPESNO");
+			var username = usernameInput.val();
+			var password = passwordInput.val();
+			console.log('username: ' + username);
+			console.log('password: ' + password);		
+			
+			if(username==""){
+				event.preventDefault();
+				return false;
+			}
+			if(password==""){
+				event.preventDefault();
+				return false;
+			}
+			if(username=="" && password==""){
+				event.preventDefault();
+				return false;
+			}
+
+			var params = {
+				'username': username, 
+				'password': password
+            }
+            
+
+            $.post('LoginServlet', params, function(data) {
+				console.log('stigao odgovor!')
+				console.log(data);
+
+				if (data.status == 'failure') {
+					usernameInput.val('');
+					passwordInput.val('');
+					return;
+                }
+                
+                
+				if (data.status == 'success') {
+					$.get('UserServlet', {'action': 'loggedInUserRole'}, function(data) {
+						console.log(data);
+
+						if (data.status == 'unauthenticated') {
+							window.location.replace('Pocetna.html');
+							return;
+						}
+
+							
+							if (data.loggedInUserRole == 'administrator') {
+								window.location.replace('Movie.html');
+							}
+							else{
+                                //treba bilo sta druigo al za sada nek bude ovo
+								window.location.replace('Movie.html');
+							}
+					});
+
+				}
+			});
+			
+			console.log('poslat zahtev!')
+
+			
+			event.preventDefault();
+			return false;
+
+
+        });
+
+  
+ 
+
+});

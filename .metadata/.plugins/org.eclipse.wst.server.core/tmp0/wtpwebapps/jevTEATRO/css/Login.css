@@ -6,6 +6,7 @@ html,body{
     background-repeat: no-repeat;
     height: 100%;
     font-family: 'Numans', sans-serif;
+    
 }
 
 .navbar{
@@ -27,6 +28,7 @@ html,body{
 .container{
     height: 100%;
     align-content: center;
+    padding: 2rem;
 }
     
     .card{
