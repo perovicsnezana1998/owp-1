@@ -3,14 +3,22 @@
 <fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="java.sql.DriverManager"/>
 <fullyQualifiedTypeName name="java.sql.SQLException"/>
-<fullyQualifiedTypeName name="cinema.DAO.ConnectionManager"/>
 <fullyQualifiedTypeName name="java.sql.Connection"/>
 <fullyQualifiedTypeName name="com.mysql.cj.jdbc.PreparedStatementWrapper"/>
 <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
 <fullyQualifiedTypeName name="java.sql.ResultSet"/>
+<fullyQualifiedTypeName name="java.awt.print.Printable"/>
 <fullyQualifiedTypeName name="java.util.Date"/>
-<fullyQualifiedTypeName name="cinema.DAO.UserDAO"/>
+<fullyQualifiedTypeName name="java.time.format.DateTimeFormatter"/>
+<fullyQualifiedTypeName name="cinema.Servlets.LoginServlet"/>
+<fullyQualifiedTypeName name="javafx.util.converter.LocalDateStringConverter"/>
+<fullyQualifiedTypeName name="java.time.LocalDate"/>
+<fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
+<fullyQualifiedTypeName name="cinema.Servlets.RegistrationServlet"/>
 <fullyQualifiedTypeName name="cinema.Model.User"/>
+<fullyQualifiedTypeName name="cinema.Model.User.Role"/>
+<fullyQualifiedTypeName name="cinema.DAO.UserDAO"/>
 <fullyQualifiedTypeName name="java.util.Map"/>
 <fullyQualifiedTypeName name="java.util.LinkedHashMap"/>
+<fullyQualifiedTypeName name="cinema.DAO.ConnectionManager"/>
 </qualifiedTypeNameHistroy>

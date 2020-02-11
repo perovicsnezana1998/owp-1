@@ -10,21 +10,21 @@ import java.sql.SQLException;
 
 public class ConnectionManager {
 	private static final String DATABASE_NAME = "cinema.db";
-	private static final String FILE_SEPERATOR = System.getProperty("file.seperator");
+	
 
-	private static final String WINDOWS_PATH = "C:" + FILE_SEPERATOR + "Baza" + FILE_SEPERATOR + DATABASE_NAME;
+	private static final String WINDOWS_PATH = "jdbc:sqlite:C:\\Baza\\cinema.db";
 	
-	//private static final String LINUX_PATH = "SQLite" + FILE_SEPERATOR + DATABASE_NAME;
+	//private static final String LINUX_PATH = "SQLite" + "/" + DATABASE_NAME;
 	
 	
-	private static final String PATH = WINDOWS_PATH;
+	//private static final String PATH = WINDOWS_PATH;
 	
 	private static Connection connection;
 	
 	public static void open() {
 		try {
 			Class.forName("org.sqlite.JDBC");
-			connection = DriverManager.getConnection("jdcb:sqlite:" + PATH);	
+			connection = DriverManager.getConnection(WINDOWS_PATH);	
 		}catch (Exception e) {
 			e.printStackTrace();
 		}

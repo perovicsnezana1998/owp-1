@@ -1,7 +1,6 @@
 package cinema.DAO;
 
 import java.sql.Connection;
-import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
@@ -25,7 +24,7 @@ public class UserDAO {
 			pstmt.setString(index ++, username);
 			pstmt.setString(index ++, password);
 			Boolean deleted = false;
-			pstmt.setBoolean(index ++, deleted);
+			pstmt.setString(index ++, deleted.toString());
 			System.out.println(pstmt);
 			System.out.println("bb");
 			rset=pstmt.executeQuery();
@@ -61,7 +60,7 @@ public class UserDAO {
 		ResultSet rset=null;
 		try {
 			String query = "SELECT Id,Role from Users WHERE Username=? AND Deleted=?";
-			System.out.println("BLABAL");
+			System.out.println(query);
 			pstmt=conn.prepareStatement(query);
 			int index = 1;
 			
@@ -76,6 +75,8 @@ public class UserDAO {
 			if(rset.next()) {
 				int id = rset.getInt(1);
 				User.Role role = User.Role.valueOf(rset.getString(2));
+				
+				
 				System.out.println(role);
 				
 				System.out.println("babbaabab3");
@@ -98,20 +99,22 @@ public class UserDAO {
 
 	public static boolean add(User user) {
 		
+		ConnectionManager.open();
 		Connection conn = ConnectionManager.getConnection();
 		
 
 		PreparedStatement pstmt = null;
 		try {
-			String query = "INSERT INTO users  VALUES (?,?,?,?,?,?);";
+			String query = "INSERT INTO Users (Username,Password,RegistrationDate,Role,Deleted)  VALUES (?,?,?,?,?)";
 			
-			pstmt = conn.prepareStatement(query);
+			pstmt=conn.prepareStatement("INSERT INTO Users (Username,Password,RegistrationDate,Role,Deleted)  VALUES (?,?,?,?,?)");
+			
 			int index = 1;
 			pstmt.setString(index++, user.getUsername());
 			pstmt.setString(index ++, user.getPassword());
-			pstmt.setDate(index++, (Date) user.getRegistrationDate());
+			pstmt.setString(index++,  user.getRegistrationDate().toString());
 			pstmt.setString(index++, user.getRole().toString());
-			pstmt.setBoolean(index++, user.isDeleted());
+			pstmt.setString(index++, "false");
 
 			
 			System.out.println(pstmt);

@@ -50,18 +50,18 @@ $(document).ready(function() {
 						console.log(data);
 
 						if (data.status == 'unauthenticated') {
-							window.location.replace('Pocetna.html');
+							window.location.replace('Login.html');
 							return;
 						}
 
 							
-							if (data.loggedInUserRole == 'administrator') {
-								window.location.replace('Administrator.html');
-							}
-							else{
-                                //treba bilo sta druigo al za sada nek bude ovo
-								window.location.replace('Movie.html');
-							}
+						if (data.loggedInUserRole == 'administrator') {
+							window.location.replace('Administrator.html');
+						}
+						else{
+							//treba bilo sta druigo al za sada nek bude ovo
+							window.location.replace('Movie.html');
+						}
 					});
 
 				}

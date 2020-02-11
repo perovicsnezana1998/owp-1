@@ -79,4 +79,17 @@
     <servlet-name>RegistrationServlet</servlet-name>
     <url-pattern>/RegistrationServlet</url-pattern>
   </servlet-mapping>
+  <listener>
+    <listener-class>cinema.Servlets.InitListener</listener-class>
+  </listener>
+  <servlet>
+    <description></description>
+    <display-name>aa</display-name>
+    <servlet-name>aa</servlet-name>
+    <servlet-class>cinema.Servlets.aa</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>aa</servlet-name>
+    <url-pattern>/aa</url-pattern>
+  </servlet-mapping>
 </web-app>

@@ -1,12 +1,9 @@
 INDEX VERSION 1.131+C:\Users\Borko\Desktop\WebProjekat\.metadata\.plugins\org.eclipse.jdt.core
 421022922.index
 315890579.index
-3494223514.index
-1930174033.index
 1967174319.index
 3625802755.index
 3649706787.index
-3215133055.index
 3889931167.index
 1580166048.index
 2021227408.index
@@ -21,11 +18,12 @@ INDEX VERSION 1.131+C:\Users\Borko\Desktop\WebProjekat\.metadata\.plugins\org.ec
 1725538253.index
 4232500288.index
 1055679481.index
-199301110.index
+3049511069.index
+429430673.index
 3521762195.index
 3280859489.index
-2916426105.index
 714888628.index
+2916426105.index
 3808123788.index
 4286618680.index
 2722927391.index
@@ -44,10 +42,9 @@ INDEX VERSION 1.131+C:\Users\Borko\Desktop\WebProjekat\.metadata\.plugins\org.ec
 1329257546.index
 2589955883.index
 4135708558.index
-592600685.index
+1940236207.index
 2785266343.index
-3693261185.index
 1860642593.index
 3180263200.index
-114876105.index
-1940236207.index
+3693261185.index
+592600685.index

@@ -1,0 +1,5 @@
+konekcija sa bazom ne valja
+
+UserDAO ispravit kada trazi pojedinacnog korisnika ( vecina provjera se zasniva na tome)
+
+registracija ne valja
